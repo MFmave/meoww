@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Love Letter 💕</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Indie+Flower&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #ad2831;
+      font-family: 'Dancing Script', cursive;
+      text-align: center;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    /* Envelope */
+    .envelope-container {
+      position: relative;
+      width: 280px;
+      height: 180px;
+      cursor: pointer;
+    }
+
+    .envelope {
+      width: 100%;
+      height: 100%;
+      background-color: #a53860;
+      position: absolute;
+      border-radius: 10px;
+      z-index: 2;
+    }
+
+    .flap {
+      width: 100%;
+      height: 90px;
+      background-color: #da627d;
+      position: absolute;
+      top: 0;
+      clip-path: polygon(0 0, 50% 50%, 100% 0);
+      transition: transform 0.6s ease-in-out;
+      transform-origin: top;
+      z-index: 3;
+    }
+
+    .letter {
+      width: 90%;
+      height: 180px;
+      background-color: #ffe5d9;
+      position: absolute;
+      top: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 5px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 15px;
+      font-size: 16px;
+      color: #333;
+      opacity: 0;
+      transition: opacity 0.6s ease-in-out;
+      z-index: 4;
+    }
+
+    .open .flap {
+      transform: rotateX(180deg);
+      z-index: 1;
+    }
+
+    .open .letter {
+      opacity: 1;
+      z-index: 5;
+    }
+
+    /* Love Letter Content */
+    .letter-content {
+      display: none;
+      background: #ffe5d9;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      width: 60%;
+      text-align: justify;
+      margin-top: 20px;
+    }
+
+    .photo-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .photo {
+      width: 300px;
+      height: auto;
+      border-radius: 15px;
+      border: 3px solid pink;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .next-button {
+      display: inline-block;
+      margin-top: 20px;
+      background-color: #ff4d6d;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 18px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+    }
+
+    .next-button:hover {
+      background-color: #d63384;
+      transform: scale(1.1);
+    }
+
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 40px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-family: 'Indie Flower', cursive;
+      font-size: 30px;
+      font-weight: 600;
+      color: black;
+      text-align: center;
+    }
+
+    p {
+      font-family: 'Indie Flower', cursive;
+      font-size: 20px;
+      font-weight: 400;
+      color: #333;
+      line-height: 1.8;
+      text-align: justify;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💌 Letter for You 💌</h1>
+
+  <!-- Envelope -->
+  <div class="envelope-container" onclick="openEnvelope()">
+    <div class="envelope"></div>
+    <div class="flap"></div>
+    <div class="letter"></div>
+  </div>
+
+  <!-- Love Letter Content (Hidden Until Open) -->
+  <div class="letter-content" id="letterContent">
+    <h2>December 19, 2024</h2>
+    <p>
+        I just had the urge to write how much I love my girlfriend. This feeling hit me when I looked at her picture, 
+        the one where she was wearing her Hello Kitty pajamas and laced sleeveless black top.  
+    </p>
+    <p>
+        I stared at the photo, admiring her eyes. Her eyes, shaped like a cat’s, pull me in with just a glance. 
+        Her stare is so leading, so captivating. And that smile—so beautiful. 
+        Her lips, soft and full, look so perfect. The kind that makes me want to kiss her forever. 
+    </p>
+    <p>
+        I don’t always know how to put my feelings into words, but one thing I know for sure—I love her. 
+        So much. And I’d do anything to make her happy and safe.
+    </p>
+    <p>
+        Looking at that picture reminded me of something—<b>damn, I really pulled my dream girl.</b> 
+        I get to stare at her and say, <i>“That’s my girlfriend.”</i> 🥹 
+        Now I understand why I pulled every crazy stunt to be with her—  
+        my heart, my soul, everything in me just knew she was the one.
+    </p>
+
+    <!-- Photo Container with Three Images -->
+    <div class="photo-container">
+      <img src="/img/IMG_7110.jpeg" class="photo" alt="Us Together">
+      <img src="/img/IMG_7111.jpeg" class="photo" alt="Memory 2">
+      <img src="/img/IMG_7364.jpeg" class="photo" alt="Memory 3">
+    </div>
+
+    <!-- Button to Next Page (Gallery) -->
+    <br><br>
+    <a href="video.html" class="next-button">Next →</a>
+  </div>
+
+  <script>
+ function openEnvelope() {
+  let envelope = document.querySelector(".envelope-container");
+  let letter = document.querySelector(".letter");
+  let letterContent = document.getElementById("letterContent");
+
+  envelope.classList.add("open");
+
+  setTimeout(() => {
+    letter.style.top = "-250px"; // Move letter fully out
+    letter.style.opacity = "1";
+    letter.style.zIndex = "5"; // Bring letter forward
+  }, 500);
+
+  setTimeout(() => {
+    letterContent.style.display = "block";
+  }, 1200);
+}
+
+  </script>
+
+</body>
+</html>
+

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Memories 🎬</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .cinema-screen {
+      width: 80%;
+      max-width: 1000px;
+      border-radius: 15px;
+      box-shadow: 0px 0px 20px rgba(122, 72, 106, 0.6);
+      overflow: hidden;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .back-button {
+      margin-top: 50px;
+      background-color: gray;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 18px;
+      box-shadow: 0px 4px 10px rgba(44, 38, 38, 0.4);
+      transition: 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: palevioletred;
+      transform: scale(1.1);
+    }
+
+    .video-container {
+  width: 90vw; /* Makes it responsive */
+  max-width: 1200px; /* Prevents it from being too large */
+  height: auto; /* Adjust height dynamically */
+  aspect-ratio: 16 / 9; /* Ensures proper widescreen fit */
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 10px solid #a53860; /* Cinema-like border */
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  padding-top: 50%;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensures full video is visible */
+  border-radius: 10px; /* Optional */
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="cinema-screen">
+    <video controls>
+      <source src="/img/f4efba1c2c9a41de8c645c02f9b34e86.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <a href="yes.html" class="back-button">← Back</a>
+
+</body>
+</html>
